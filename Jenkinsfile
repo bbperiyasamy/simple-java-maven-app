@@ -5,7 +5,7 @@ pipeline {
       DB_ENGINE    = 'sqlite'
   }
  tools {maven "Maven-360"
-        org.jenkinsci.plugins.docker.commons.tools.DockerTool "docker"
+        docker "docker"
         }
    stages {
     stage('Build') {
