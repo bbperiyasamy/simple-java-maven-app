@@ -3,8 +3,9 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'echo Build stage'
-                sh 'mvn clean package'
+              def mvnHome =  tool name: 'maven-360', type: 'maven'
+              sh "${mvnHome}/bin/mvn package"
+              sh 'echo Build stage'
             }
         }
         stage('Test') {
