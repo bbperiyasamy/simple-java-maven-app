@@ -5,6 +5,7 @@ pipeline {
       DB_ENGINE    = 'sqlite'
   }
  tools {maven "Maven-360"}
+ tools {docker "docker"}
    stages {
     stage('Build') {
       steps {
@@ -14,9 +15,9 @@ pipeline {
     }
     stage('Docker') {
       steps {
-      script {
-      def  dockerfile = 'Dockerfile.test'
-       }
+    //  script {
+    //  def  dockerfile = 'Dockerfile.test'
+    //   }
         sh 'echo Docker '
       }
     }
