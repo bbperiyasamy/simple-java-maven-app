@@ -8,13 +8,13 @@ pipeline {
    stages {
     stage('Build') {
       steps {
-         sh 'mvn clean package'
+        //sh 'mvn clean package'
          sh "echo $DISABLE_AUTH "
       }
     }
     stage('Docker') {
       steps {
-        sh 'Docker '
+        sh 'echo Docker '
       }
     }
   }
