@@ -14,6 +14,9 @@ pipeline {
     }
     stage('Docker') {
       steps {
+      script {
+      def  dockerfile = 'Dockerfile.test'
+       }
         sh 'echo Docker '
       }
     }
