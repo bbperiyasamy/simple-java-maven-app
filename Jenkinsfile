@@ -4,7 +4,7 @@ node{
 	stage('Git Checkout'){
 	   git branch: 'master',
 	       credentialsId: 'github',
-		   url: 'https://github.com/javahometech/my-app'
+		   url: 'https://github.com/bbperiyasamy/my-app.git'
 	}
 
 	stage('Build'){
