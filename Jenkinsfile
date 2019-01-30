@@ -1,12 +1,11 @@
 #!groovy
-def mvnHome =  tool name: 'maven-360', type: 'maven'
 pipeline {
     agent any
     stages {
         stage('Build') {
             steps {
-
-              sh "${mvnHome}/bin/mvn package"
+            def mvnHome =  tool name: 'maven-360', type: 'maven'
+            sh "${mvnHome}/bin/mvn package"
               sh 'echo Build stage'
             }
         }
