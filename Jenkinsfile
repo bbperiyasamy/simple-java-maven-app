@@ -1,5 +1,5 @@
 node{
-    def mvnHome = tool name: 'maven-360', type: 'maven'
+    def mvnHome = tool name: 'Maven-360', type: 'maven'
     def mvn = "${mvnHome}/bin/mvn"
 	stage('Git Checkout'){
 	   git branch: 'master',
