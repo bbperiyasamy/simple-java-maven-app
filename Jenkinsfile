@@ -3,8 +3,8 @@ pipeline {
     agent any
     stages {
         stage('Build') {
+        def mvnHome =  tool name: 'maven-360', type: 'maven'
             steps {
-            def mvnHome =  tool name: 'maven-360', type: 'maven'
             sh "${mvnHome}/bin/mvn package"
               sh 'echo Build stage'
             }
