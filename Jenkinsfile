@@ -1,3 +1,6 @@
+#!groovy
+def awsRegion = "us-east-1"
+
 pipeline {
   agent any
   environment {
@@ -10,6 +13,7 @@ pipeline {
       steps {
         //sh 'mvn clean package'
          sh "echo $DISABLE_AUTH "
+         sh "echo ${awsRegion}"
       }
     }
     stage('Docker') {
