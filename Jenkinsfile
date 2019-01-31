@@ -4,9 +4,7 @@ pipeline {
       DISABLE_AUTH = 'true'
       DB_ENGINE    = 'sqlite'
   }
- tools {maven "Maven-360"
-        docker "docker"
-        }
+ tools {maven "Maven-360"  }
    stages {
     stage('Build') {
       steps {
