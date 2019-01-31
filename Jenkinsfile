@@ -14,7 +14,7 @@ pipeline {
         //sh 'mvn clean package'
          sh "echo $DISABLE_AUTH "
          sh "echo ${awsRegion}"
-         sh "echo "Running ${env.BUILD_ID}on${env.JENKINS_URL}"
+         sh "echo "Running ${env.BUILD_ID} on ${env.JENKINS_URL}" \n 
       }
     }
     stage('Docker') {
